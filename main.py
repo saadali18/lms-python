@@ -1,16 +1,31 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+library = {}
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def add_book(title, author, year):
+    raise NotImplemented
 
 
-# Press the green button in the gutter to run the script.
+def view_books():
+    raise NotImplemented
+
+
 if __name__ == '__main__':
-    print_hi('Hello World')
+    while True:
+        print("\nLibrary Management System")
+        print("1. Add a book")
+        print("2. View all books")
+        print("3. Quit")
+        choice = input("Enter your choice: ")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+        if choice == '1':
+            t = input("Enter the title of the book: ")
+            a = input("Enter the author of the book: ")
+            y = input("Enter the publication year: ")
+            add_book(t, a, y)
+        elif choice == '2':
+            view_books()
+        elif choice == '3':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
